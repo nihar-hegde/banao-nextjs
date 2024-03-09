@@ -8,6 +8,7 @@ import {
 import { DropDownProps } from "@/constants";
 import { Button } from "./ui/button";
 import Image from "next/image";
+import { Separator } from "./ui/separator";
 
 export const DropDownItems = ({ id, logoUrl, label, items }: DropDownProps) => {
   return (
@@ -21,7 +22,10 @@ export const DropDownItems = ({ id, logoUrl, label, items }: DropDownProps) => {
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         {items.map((item) => (
-          <DropdownMenuItem key={item}>{item}</DropdownMenuItem>
+          <>
+            <DropdownMenuItem key={item}>{item}</DropdownMenuItem>
+            <Separator />
+          </>
         ))}
       </DropdownMenuContent>
     </DropdownMenu>
