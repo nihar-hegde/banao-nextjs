@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -22,10 +22,10 @@ export const DropDownItems = ({ id, logoUrl, label, items }: DropDownProps) => {
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         {items.map((item) => (
-          <>
-            <DropdownMenuItem key={item}>{item}</DropdownMenuItem>
+          <Fragment key={item}>
+            <DropdownMenuItem>{item}</DropdownMenuItem>
             <Separator />
-          </>
+          </Fragment>
         ))}
       </DropdownMenuContent>
     </DropdownMenu>
